@@ -12,7 +12,7 @@ function App() {
   const {onClose, onOpen, isOpen} = useDisclosure;
   return (
     <Router onLoad={appConfigs()}>
-      <main id='app-root'>
+      
         <VStack spacing={0} align='stretch' h="100%" w="100%" p="0" m="0">
           <Box>
               {/* <Header /> */}
@@ -24,7 +24,6 @@ function App() {
               <Footer/>
           </Box>
         </VStack>
-      </main>
     </Router>
   )
 }
