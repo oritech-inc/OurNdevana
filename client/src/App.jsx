@@ -9,45 +9,39 @@ import Footer from './components/layouts/site/footer/footer'
 import drawer from './components/helper/Drawer'
 
 function App() {
-  const {onClose, onOpen, isOpen} = useDisclosure;
+  const { onClose, onOpen, isOpen } = useDisclosure;
   return (
     <Router onLoad={appConfigs()}>
-      
-        <VStack spacing={0} align='stretch' h="100%" w="100%" p="0" m="0">
-          <Box>
-              {/* <Header /> */}
-          </Box>
-          <Box py={35}>
-              {/* <Sections /> */}
-          </Box>
-          <Box bg='gray.500' color='white'>
-              <Footer/>
-          </Box>
-        </VStack>
+
+      <VStack spacing={0} align='stretch' h="100%" w="100%" p="0" m="0">
+        <Header />
+        <Sections />
+        <Footer />
+      </VStack>
     </Router>
   )
 }
 
-function appConfigs(){
+function appConfigs() {
 
-  if(checkJavaEnabled()){
+  if (checkJavaEnabled()) {
     checkNetStatus();
   }
-  else{
-    return(<drawer/>)
+  else {
+    return (<drawer />)
   }
 }
 
-function checkNetStatus(){
+function checkNetStatus() {
   const elem = document.getElementById('app-root');
-  if(navigator.onLine){
+  if (navigator.onLine) {
     alert('True')
-  }else{
+  } else {
     alert('False')
   }
 }
 
-function checkJavaEnabled(){
+function checkJavaEnabled() {
   return navigator.javaEnabled();
 }
 

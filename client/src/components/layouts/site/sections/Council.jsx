@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react"
 
 function Council() {
+    const url = window.location.origin + '/public/imgs/icons/council/';
     return (
 
         <VStack>
@@ -54,10 +55,11 @@ function CardItem() {
 }
 
 function CardGrid() {
+    const url = window.location.origin + '/public/imgs/icons/council/';
     return (
         <Grid templateColumns='repeat(6, 1fr)' gap={6} align='stretch'>
             <GridItem colSpan={2} bg=''>
-                <Tooltip placement='top' label='Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut, consectetuer adipiscing elit.'
+                <Tooltip placement='top' label='tightly-knit community dedicated to making a positive impact in our municipality. Our shared history unites us as we work towards a better future.'
                     hasArrow bg='#c6a779' color='white' rounded='xl'>
                     <Card direction={{ base: 'column', sm: 'row' }} overflow='hidden' color='#c6a799'
                         _hover={{
@@ -67,16 +69,16 @@ function CardGrid() {
                         <CardBody>
                             <Heading size='lg'>MISSION</Heading>
                             <Text fontSize='xs'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                tightly-knit community dedicated to making a positive impact in our municipality.
                             </Text>
                         </CardBody>
                         <Image objectFit='cover' maxW={{ base: '100%', sm: '200px' }}
-                            src='../../../../../public/imgs/icons/council/mission.jpg' alt='Mission' />
+                            src={url + 'mission.jpg'} alt='Mission' />
                     </Card>
                 </Tooltip>
             </GridItem>
             <GridItem colSpan={2} bg=''>
-                <Tooltip placement='top' label='Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut, consectetuer adipiscing elit.'
+                <Tooltip placement='top' label='We are a tightly-knit community dedicated to making a positive impact in our municipality. Our shared history unites us as we work towards a better future.'
                     hasArrow bg='#c6a779' color='white' rounded='xl'>
                     <Card direction={{ base: 'column', sm: 'row' }} overflow='hidden' color='#c6a799'
                         _hover={{
@@ -87,16 +89,16 @@ function CardGrid() {
                         <CardBody>
                             <Heading size='lg'>VISION</Heading>
                             <Text fontSize='xs'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                We are a tightly-knit community dedicated to making a positive impact in our society.
                             </Text>
                         </CardBody>
                         <Image objectFit='cover' maxW={{ base: '100%', sm: '200px' }}
-                            src='../../../../../public/imgs/icons/council/vision.jpg' alt='Vision' />
+                            src={url + 'vision.jpg'} alt='Vision' />
                     </Card>
                 </Tooltip>
             </GridItem>
             <GridItem colSpan={2} bg=''>
-                <Tooltip placement='top' label='Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut, consectetuer adipiscing elit.'
+                <Tooltip placement='top' label='Our key values are reliability, positivity, passion, honesty, efficient, commitment, loyalty&optimism.'
                     hasArrow bg='#c6a779' color='white' rounded='xl'>
                     <Card direction={{ base: 'column', sm: 'row' }} overflow='hidden' color='#c6a799'
                         _hover={{
@@ -107,11 +109,11 @@ function CardGrid() {
                         <CardBody>
                             <Heading size='lg'>VALUES</Heading>
                             <Text fontSize='xs'>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                Our key values are reliability, positivity, passion, honesty, efficient, commitment, loyalty&optimism.
                             </Text>
                         </CardBody>
                         <Image objectFit='cover' maxW={{ base: '100%', sm: '200px' }}
-                            src='../../../../../public/imgs/icons/council/value.jpg' alt='Values' />
+                            src={url + 'value.jpg'} alt='Values' />
                     </Card>
                 </Tooltip>
             </GridItem>
